@@ -7,7 +7,7 @@
 package main
 
 import (
-	"dfs/fs/concrete"
+	"github.com/deathly809/gofs/concrete"
 	"flag"
 	"log"
 )
@@ -21,5 +21,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
+    
 }
