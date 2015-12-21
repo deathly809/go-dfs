@@ -15,10 +15,14 @@ import (
 func main() {
 	isController := flag.Bool("daemon", false, "starts up a controller")
 	if *isController {
-		log.Print("Controller started")
-	}
+		log.Print("Controller started...")
+	}else {
+        log.Print("Worker started...")
+    }
+    
 	fs,err := concrete.Open("test")
 	if err != nil {
 		log.Fatal(err)
 	}
+    defer fs.Shutdown()
 }
